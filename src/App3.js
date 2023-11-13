@@ -2,6 +2,9 @@ import "./App3.css";
 
 import {useState, useEffect} from 'react';
 import {youtubeData} from "./youtubeData";
+import Skeleton from "react-loading-skeleton";
+import SkeletonCard from './components/SkeletonCard';
+import CardList from './components/CardList';
 
 const App = () => {
     const [loading, setLoading] = useState(false);
@@ -18,8 +21,19 @@ const App = () => {
         }
     , []);
     return(
-        <div>
-            
+        <div className="App">
+            {loading && <SkeletonCard listLength={youtubeData[0].items.length} />}
+            {
+                !loading &&
+                videos.map(
+                    (list, index) => (
+                        <section key={index}>
+                            <h2 className="section-title">{list.section}</h2>
+                            <CardList list={list} />
+                        </section>
+                    )
+                )
+            }
         </div>
     )
 
