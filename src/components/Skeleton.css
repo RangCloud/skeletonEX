@@ -1,3 +1,12 @@
+@keyframes loading{
+    0%{
+        transform: translateX(0);
+    }
+    50%, 100%{
+        transform: translateX(460px);
+    }
+}
+
 .skeleton-item{
     display: flex;
     border: 1px solid #9999;
@@ -24,7 +33,8 @@
     left: 0;
     width: 30px;
     height: 100%;
-    animation: ;
+    animation: loading 2s infinite linear;
+    background: linear-gradient(to right, #f2f2f2, #dddddd, #f2f2f2);
 }
 
 .skeleton-info{
@@ -45,7 +55,12 @@
 .skeleton-name::before{
     content: "";
     position: absolute;
-    animation: ;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    animation: loading 2s infinite linear;
+    background: linear-gradient(to right, #f2f2f2, #dddddd, #f2f2f2);
 }
 
 .skeleton-email{
@@ -59,5 +74,10 @@
 .skeleton-email::before{
     content: "";
     position: absolute;
-    animation: ;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    animation: loading 2s infinite linear;
+    background: linear-gradient(to right, #f2f2f2, #dddddd, #f2f2f2);
 }

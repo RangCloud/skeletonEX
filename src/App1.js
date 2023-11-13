@@ -14,10 +14,10 @@ export default function App(){
 
     return(
         <div className="App">
-            <ul>
+            <ul className="contentsDiv">
                 <WithoutSkeleton data={data} isLoading={isLoading} />
             </ul>
-            <ul>
+            <ul className="contentsDiv">
                 <WithSkeleton data={data} isLoading={isLoading} contentsLength={userdata.length} />
             </ul>
         </div>

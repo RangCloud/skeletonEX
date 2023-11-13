@@ -13,11 +13,11 @@ const WithSkeleton = props =>{
                 :
                 props.data.map(
                     item => (
-                        <li key={item.id}>
+                        <li className="item" key={item.id}>
                             <div>
-                                <img src={item.avatar}></img>
+                                <img className="img" src={item.avatar}></img>
                             </div>
-                            <div>
+                            <div className="info">
                                 <h2>{item.first_name}/{item.last_name}</h2>
                                 <p>{item.email}</p>
                             </div>
