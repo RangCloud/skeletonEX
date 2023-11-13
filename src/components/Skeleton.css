@@ -1,0 +1,63 @@
+.skeleton-item{
+    display: flex;
+    border: 1px solid #9999;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    align-items: center;
+    background-color: brown;
+    position: relative;
+}
+
+.skeleton-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+.skeleton-img::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    animation: ;
+}
+
+.skeleton-info{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.skeleton-name{
+    width: 70%;
+    height: 18px;
+    background: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+.skeleton-name::before{
+    content: "";
+    position: absolute;
+    animation: ;
+}
+
+.skeleton-email{
+    width: 90%;
+    height: 18px;
+    margin-top: 5px;
+    background: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+.skeleton-email::before{
+    content: "";
+    position: absolute;
+    animation: ;
+}
