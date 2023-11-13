@@ -3,7 +3,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import "../App3.css";
 
 const SkeletonItem = (props) => {
-    return(
+    return (
         <section>
             <h2 className="section-title">
                 <Skeleton duration={1} height={30} width={300} />
@@ -13,14 +13,14 @@ const SkeletonItem = (props) => {
             </h2>
 
             <ul className="list">
-                {{/* props.listLength */}}
+                {/* props.listLength */}
                 {Array(3).fill().map(
-                    (item, index) => (<li className="card" key={index}><Skeleton height={180}/></li>)
+                    (item, index) => (<li className="card" key={index}><Skeleton height={180} /></li>)
                 )}
             </ul>
         </section>
-    )
-}
+    );
+};
 
 const SkeletonCard = () => {
     return(
